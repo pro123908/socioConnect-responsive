@@ -36,8 +36,8 @@ ob_start(); // Turn on ouput buffering
 
 
     <div class="header-container">
-      <div class="header">
-        <div class="header-heading">
+      <div class="header row">
+        <div class="header-heading col-md-3 col-lg-3 col-xl-3">
           <h1><a href="main.php" class="heading_link">Socio Connect</a></h1>
         </div>
 
@@ -50,7 +50,7 @@ ob_start(); // Turn on ouput buffering
     ?>
 
         <!-- Search Bar to search Users -->
-        <div class="header-search-bar">
+        <div class="header-search-bar col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
           <input type="text" class="search-input" placeholder="Search" onkeyup="getUsers(this.value,1)" name="q" autocomplete = "off" >
 
           <!-- Results of search will be displayed in this div -->
@@ -58,10 +58,11 @@ ob_start(); // Turn on ouput buffering
         </div>
 
         <!-- Header Buttons -->
-        <div class="header-links">
+        <div class="header-links col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 ">
 
           <!--************************* Notification Dropdown ****************************-->
-          <div class='notification-dropdown'>
+          <div class='row col-12'>
+          <div class='notification-dropdown col-3 col-sm-3 col-md-1 col-lg-1 col-xl-1'>
             <a href="javascript:toggleDropdown('.noti-dropdown');" class="header-btn mr-1 "><i class="noti-click fas fa-bell fa-lg"></i></a>
 
             <!-- Dropdown Content -->
@@ -78,7 +79,7 @@ ob_start(); // Turn on ouput buffering
           <!-- ********************************************************** -->
 
           <!-- ********** Message Dropdown ************** -->
-          <div class='message-dropdown'>
+          <div class='message-dropdown  col-3 col-sm-3 col-md-1 col-lg-1 col-xl-1'>
             <a href="javascript:toggleDropdown('.msg-dropdown');" class="header-btn mr-1"><i class="msg-click fas fa-envelope fa-lg"></i></a>
 
 
@@ -99,7 +100,7 @@ ob_start(); // Turn on ouput buffering
           <!-- ********************************************************** -->
 
           <!-- ********** Request Dropdown ************** -->
-          <div class='request-dropdown'>
+          <div class='request-dropdown col-3 col-sm-3 col-md-1 col-lg-1 col-xl-1'>
             <a href="javascript:toggleDropdown('.req-dropdown');" class="header-btn mr-1"><i class="req-click fas fa-user-plus fa-lg"></i></a>
 
             <div class='req-dropdown'>
@@ -119,15 +120,21 @@ $value = CountDropdown(3);
 
 
           <!--  Login User Name -->
+          <div class='logged-user-div '>
           <a class='logged-user' href='timeline.php'>
             <?php echo $image ?>
             <span><?php echo $user ?></span>
           </a>
+          </div>
 
 
           <!-- log out button -->
-          <a href="./includes/EventHandlers/logout.php" class="header-btn mr-1"><i class="fas fa-sign-out-alt fa-lg"></i></a>
+          <div class='col-3 col-sm-3 col-md-1 col-lg-1 col-xl-1'>
+          <a href="./includes/EventHandlers/logout.php" class="header-btn mr-1 "><i class="fas fa-sign-out-alt fa-lg"></i></a>
+          </div>
+          
         </div>
+  </div>
         <!-- ********************* Header Links **********************  -->
       </div>
     <!-- ***************************** Header *************************** -->

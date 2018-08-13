@@ -47,6 +47,7 @@ body {
   background-size: auto;
   background-repeat: no-repeat; */
   margin-top: 81px;
+  background: #edf2f6;
 }
 
 /* ------------------------- Header Section of website ------------------------ */
@@ -54,8 +55,6 @@ body {
 .header {
   /* background: linear-gradient(to right bottom, #243337, #638a8c) no-repeat center center fixed; */
   background-color: #000;
-  display: flex;
-  justify-content: space-between;
   height: 80px;
   color: #fff;
 }
@@ -79,7 +78,7 @@ body {
 /* Header-links on login page */
 
 .header-links-login {
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
 }
 
 /*  Main Heading of website present on header */
@@ -92,10 +91,10 @@ body {
 /* Main header heaing container */
 
 .header-heading {
+  font-family: "Berkshire Swash", sans-serif;
   display: flex;
   align-items: center;
-  padding: 0px 14px 0px 10px;
-  font-family: "Berkshire Swash", sans-serif;
+  padding-left: 2%;
 }
 
 .header-heading:hover {
@@ -116,7 +115,7 @@ body {
 /* header buttons on login Page and Sign up page */
 
 .header-links-login .header-btn {
-  flex: 0 0 10%;
+  /* flex: 0 0 10%; */
 }
 
 /* Header Search Bar */
@@ -420,19 +419,14 @@ input:-webkit-autofill {
 /* Content Area */
 
 .content-area {
-  display: flex;
-  margin: 100px 100px 10px 100px;
+  margin: 100px 50px 10px 100px;
   padding: 10px;
   overflow: hidden;
 }
 
-.post-area {
-  flex: 2;
-  margin: 0px 30px;
-}
+.post-area {}
 
 .friends-area {
-  flex: 1;
   border-radius: 5px;
   border: 1px solid #e6ecf5;
   background-color: #fff;
@@ -942,7 +936,6 @@ input[type="file"]:hover {
 
 .notification-area,
 .recent-activities-area {
-  flex: 1;
   border-radius: 5px;
   border: 1px solid #e6ecf5;
   background-color: #fff;
@@ -2075,4 +2068,74 @@ input[type="file"]:hover {
   height: fit-content;
   background-color: #fff;
   width: 300px;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 768px) {
+  .header {
+    height: 100px;
+  }
+  .side-bar {
+    display: none;
+  }
+  .recent-activities-area {
+    display: none;
+  }
+  .friends-area {
+    display: none;
+  }
+  .header-heading {
+    display: none;
+  }
+  .logged-user {
+    display: none;
+  }
+  .main-container {
+    margin-top: 160px;
+  }
+  .header-search-bar {
+    flex: 0 0 100%;
+    padding: 0px 25px;
+  }
+  .header-search-bar .search-input {
+    height: 40%;
+  }
+  .header-links {
+    flex: 0 0 100%;
+    text-align: center;
+    height: 20%;
+    margin-top: 2%;
+  }
+  /* .dropdown {
+    margin-right: 25%;
+  } */
+}
+
+@media only screen and (max-width: 992px) {
+  .logged-user {
+    margin: 0;
+  }
+  .recent-activities-area {
+    display: none;
+  }
+  .friends-area {
+    display: none;
+  }
+  .side-bar-container {
+    display: none;
+  }
+  .content-area {
+    margin: 0;
+  }
+  .main-container {
+    margin-top: 15%;
+  }
+}
+
+@media only screen and (min-width:768px) {
+  .header-links .row {
+    display: flex;
+    align-items: center;
+  }
 }
