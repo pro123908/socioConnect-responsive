@@ -66,6 +66,7 @@ ob_start(); // Turn on ouput buffering
             <a href="javascript:toggleDropdown('.noti-dropdown');" class="header-btn mr-1 "><i class="noti-click fas fa-bell fa-lg"></i></a>
 
             <!-- Dropdown Content -->
+            
             <div class='noti-dropdown'>
               <?php showNotifications(2, 1, 20)?>
             </div>
@@ -75,7 +76,8 @@ ob_start(); // Turn on ouput buffering
     countDropdownDisplay($value, 'noti');
     ?>
             </div>
-          </div>
+          
+  </div>
           <!-- ********************************************************** -->
 
           <!-- ********** Message Dropdown ************** -->

@@ -2110,6 +2110,17 @@ input[type="file"]:hover {
   /* .dropdown {
     margin-right: 25%;
   } */
+  .post-video {
+    width: 90%;
+  }
+  .noti-dropdown,
+  .msg-dropdown,
+  .req-dropdown {
+    top: 150%;
+  }
+  .noti-dropdown {
+    left: 0;
+  }
 }
 
 @media only screen and (max-width: 992px) {
@@ -2129,7 +2140,7 @@ input[type="file"]:hover {
     margin: 0;
   }
   .main-container {
-    margin-top: 15%;
+    margin-top: 20%;
   }
 }
 
