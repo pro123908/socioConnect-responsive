@@ -279,20 +279,17 @@ body {
   background-image: url("../assets/login.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  display: flex;
-  height: 100%;
+  /* height: 100%; */
 }
 
 .login-logo {
   background-image: url("../assets/logo2.png");
   background-repeat: no-repeat;
   background-size: 40vh;
-  flex: 1;
+  height: 20%
 }
 
 .login-info {
-  flex: 1;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -303,16 +300,13 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
   margin-top: 10px;
-  margin-left: 40px;
 }
 
 .sign-form-container {
   /* flex: 1; */
   margin-top: 20px;
   background-color: rgba(0, 0, 0, 0.5);
-  width: 60%;
   padding: 20px 30px 10px;
-  margin-left: 40px;
 }
 
 /* Login Page Heading */
@@ -1498,9 +1492,9 @@ input[type="file"]:hover {
   margin: 10px;
 }
 
-.chat-username{
+.chat-username {
   text-decoration: none;
-  color : black;
+  color: black;
 }
 
 .chat-messages {
@@ -2071,12 +2065,12 @@ input[type="file"]:hover {
   display: block;
 }
 
-.sponsor-link{
-  text-decoration : none;
-  color : white;
+.sponsor-link {
+  text-decoration: none;
+  color: white;
 }
 
-.user-isnt-friend{
+.user-isnt-friend {
   margin-bottom: 50px;
   height: fit-content;
   background-color: #fff;
