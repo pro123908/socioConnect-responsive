@@ -40,8 +40,8 @@ if (isset($_GET['visitingUserID']) && isset($_SESSION['user_id'])) {
 }
 ?>
 
-<div class='user-timeline'>
-    <div class='user-cover-area'>
+<div class='user-timeline row'>
+    <div class='user-cover-area col-lg-12 col-xl-12'>
         <?php $flag == 1 ? coverArea($_SESSION['user_id']) : coverArea($_GET['visitingUserID'])?>
     </div>
 
@@ -67,10 +67,10 @@ if (isset($_GET['visitingUserID']) && $_GET['visitingUserID'] != $_SESSION['user
 
 
 
-    <div class='content-area'>
+    <div class='content-area col-lg-12 col-xl-12 row'>
         <?php
 if ($flag == 1 || $flag == 2) {?>
-                <div class="content-left-side">
+                <div class="content-left-side col-lg-3 col-xl-3">
 
                     <div class='user-info-area'>
                         <div class='user-info-heading'>User Details</div>
@@ -106,7 +106,7 @@ if ($flag == 1 || $flag == 2) {?>
                 </div>
                 <!-- Right Side content Finished -->
 
-                <div class='post-area'>
+                <div class='post-area col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5'>
                     <?php
                         // Add post functionality only if the user is visiting his own timeline
                         if ($flag == 1) {
@@ -129,7 +129,7 @@ if ($flag == 1 || $flag == 2) {?>
                 </div>
                 <!-- Posts Div ended -->
 
-                <div class='content-right-side'>
+                <div class='content-right-side col-lg-3 col-xl-3'>
                     <?php if ($flag == 2) {?>
                         <div class='mutual-friends-area'>
                             <div class='mutual-friends-heading'>Mutual Friends</div>

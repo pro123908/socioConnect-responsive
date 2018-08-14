@@ -1974,5 +1974,5 @@ setInterval(commentsRefresh, 3000);
 setInterval(notificationRefresh, 3000);
 setInterval(likesRefresh, 3000);
 setInterval(messageRefresh, 1000);
-setInterval(updateDropdownMsg, 1000);
+// setInterval(updateDropdownMsg, 1000);
 setInterval(updateDropdownMsgCount, 1000);
