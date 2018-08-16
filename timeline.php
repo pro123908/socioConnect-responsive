@@ -40,8 +40,8 @@ if (isset($_GET['visitingUserID']) && isset($_SESSION['user_id'])) {
 }
 ?>
 
-<div class='user-timeline row'>
-    <div class='user-cover-area col-lg-12 col-xl-12'>
+<div class='user-timeline '>
+    <div class='user-cover-area '>
         <?php $flag == 1 ? coverArea($_SESSION['user_id']) : coverArea($_GET['visitingUserID'])?>
     </div>
 
@@ -67,7 +67,7 @@ if (isset($_GET['visitingUserID']) && $_GET['visitingUserID'] != $_SESSION['user
 
 
 
-    <div class='content-area col-lg-12 col-xl-12 row'>
+    <div class='content-area row'>
         <?php
 if ($flag == 1 || $flag == 2) {?>
                 <div class="content-left-side col-lg-3 col-xl-3">
@@ -106,7 +106,7 @@ if ($flag == 1 || $flag == 2) {?>
                 </div>
                 <!-- Right Side content Finished -->
 
-                <div class='post-area col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5'>
+                <div class='post-area col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6'>
                     <?php
                         // Add post functionality only if the user is visiting his own timeline
                         if ($flag == 1) {

@@ -1855,7 +1855,7 @@ PROFILE;
         }
         $content .= <<<PROFILE
     </div>
-    <div class='user-timeline-tabs'>
+    <div class='user-timeline-tabs col-lg-12 col-xl-12'>
 
     <div class='friends-link'>
         <a href='{$friendsLink}' class='friends-link-button'>Friends</a>

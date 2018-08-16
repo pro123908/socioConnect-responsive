@@ -685,7 +685,7 @@ input[type="file"]:hover {
 }
 
 .post-video {
-  width: 500px;
+  width: 90%;
 }
 
 .post .post-header {
@@ -2156,8 +2156,27 @@ input[type="file"]:hover {
   .content-area {
     margin: 0;
   }
+  .friends-link,
+  .newsfeed-link {
+    display: none;
+  }
   .main-container {
     margin-top: 20%;
+  }
+  .user-cover-area .user-cover {
+    height: 42vh;
+  }
+  .user-cover-area {
+    height: 60%;
+  }
+  .user-pic-container {
+    top: 100%;
+  }
+}
+
+@media only screen and (max-width: 728px) {
+  .user-cover-area .user-cover {
+    background-size: contain;
   }
 }
 
