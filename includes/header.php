@@ -36,7 +36,7 @@ ob_start(); // Turn on ouput buffering
 
 
     <div class="header-container">
-      <div class="header row">
+      <div class="header row no-gutters">
         <div class="header-heading col-md-3 col-lg-3 col-xl-3">
           <h1><a href="main.php" class="heading_link">Socio Connect</a></h1>
         </div>

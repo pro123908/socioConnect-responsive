@@ -121,7 +121,7 @@ body {
 /* Header Search Bar */
 
 .header-search-bar {
-  flex: 0 0 35%;
+  /* flex: 0 0 35%; */
   position: relative;
   display: flex;
   align-items: center;
@@ -1186,8 +1186,8 @@ input[type="file"]:hover {
 }
 
 .user-pic-container img {
-  width: 150px;
-  height: 150px;
+  width: 100%;
+  height: 100%;
 }
 
 .edit-profile-pic {
@@ -1321,8 +1321,8 @@ input[type="file"]:hover {
 /* Message Area */
 
 .message-area {
-  display: flex;
-  height: 88%;
+  /* display: flex; */
+  height: 86%;
   overflow: hidden;
 }
 
@@ -1353,7 +1353,7 @@ input[type="file"]:hover {
 }
 
 .recent-chat-area {
-  flex: 1;
+  /* flex: 1; */
   background-color: #fff;
 }
 
@@ -1450,7 +1450,7 @@ input[type="file"]:hover {
 }
 
 .chat-box {
-  flex: 2.5;
+  /* flex: 2.5; */
   background-color: #fff;
 }
 
@@ -1472,7 +1472,7 @@ input[type="file"]:hover {
 }
 
 .convo-area {
-  margin: 10px;
+  /* margin: 10px; */
   height: 76%;
   overflow-y: scroll;
 }
@@ -1503,7 +1503,7 @@ input[type="file"]:hover {
 .chat-message {
   padding: 5px;
   border-radius: 12px;
-  max-width: 80%;
+  max-width: 100%;
   margin-bottom: 10px;
   display: flex;
   align-items: center;
@@ -1541,7 +1541,7 @@ input[type="file"]:hover {
   display: inline-block;
   font-size: 10px;
   margin: 5px;
-  width: 120px;
+  width: 50%;
 }
 
 .time-display {
@@ -2092,14 +2092,16 @@ input[type="file"]:hover {
     display: none;
   }
   .main-container {
-    margin-top: 160px;
+    /* margin-top: 160px; */
   }
   .header-search-bar {
-    flex: 0 0 100%;
-    padding: 0px 25px;
+    /* flex: 0 0 100%; */
+    /* padding: 0px 25px; */
+    padding: 0 20px !important;
   }
   .header-search-bar .search-input {
     height: 40%;
+    width: 100%;
   }
   .header-links {
     flex: 0 0 100%;
@@ -2132,6 +2134,25 @@ input[type="file"]:hover {
   .recent-user-div {
     text-align: left;
   }
+  .user-timeline {
+    margin-top: 100px;
+  }
+  .recent-chat-area {
+    display: none;
+  }
+  .chat-box {
+    margin-top: 16px;
+  }
+  .convo-area {
+    height: 73%;
+  }
+  .search-result {
+    top: 90%;
+    width: 90%;
+  }
+  .search-person-container {
+    padding-right: 5px;
+  }
 }
 
 @media only screen and (max-width: 992px) {
@@ -2155,19 +2176,21 @@ input[type="file"]:hover {
   }
   .content-area {
     margin: 0;
+    margin-top: 100px;
   }
   .friends-link,
   .newsfeed-link {
     display: none;
   }
   .main-container {
-    margin-top: 20%;
+    /* margin-top: 20%; */
   }
   .user-cover-area .user-cover {
     height: 42vh;
   }
   .user-cover-area {
     height: 60%;
+    margin-bottom: -80px;
   }
   .user-pic-container {
     top: 100%;
