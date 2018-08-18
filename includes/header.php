@@ -2,6 +2,15 @@
 
 ob_start(); // Turn on ouput buffering
 
+$value = $_SERVER['REQUEST_URI'];
+
+
+$index = strripos($value,'=');
+
+$loc = null;
+if($index)
+  $loc = substr($value,$index+1);
+
 ?>
 
 <!-- Header Section of the website. Will be included in every page  -->
@@ -10,11 +19,11 @@ ob_start(); // Turn on ouput buffering
   <head>
     <title class='pageTitle'></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./icons/css/all.css" >
+    <!-- <link rel="stylesheet" href="./icons/css/all.css" > -->
     <link rel="shortcut icon" href="favicon.ico" />
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">  -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">  
     <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
@@ -120,6 +129,7 @@ $value = CountDropdown(3);
           </div>
           <!-- ********************************************************** -->
 
+        
 
           <!--  Login User Name -->
           <div class='logged-user-div '>
@@ -137,11 +147,25 @@ $value = CountDropdown(3);
           
         </div>
   </div>
+ 
         <!-- ********************* Header Links **********************  -->
       </div>
     <!-- ***************************** Header *************************** -->
+    <div class='side-bar-res-container'>
+<div class='side-bar-res'>
+    <?php 
+      if($loc == $_SESSION['user_id'] || !$loc){
+        sideBar(2);
+      }else{
+        sideBar(2,$loc);
+      }
+    ?>
+</div>
+</div>
     </div>
-  <?php }?>
+
+   
+    <?php /*echo "<div height='500px' style='margin-top:500px'>$loc</div>"; */}?>
 
 
 <script>

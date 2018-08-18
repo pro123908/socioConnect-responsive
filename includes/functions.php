@@ -2626,10 +2626,17 @@ function sendReqFromDefaultAccount($id){
     notification($defaultAccountId, $id, 0, 'request');
 }
 
-function sideBar(){
+function sideBar($flag=0,$id=null){
 
+    /*
+    flag 1: desktop
+    flag 2 : mobile
+    */
+
+    $curUser = $_SESSION['user_id'];
+
+    if($flag == 1){
     $iconArray = array("newspaper","user","bell","comments","user-friends","chart-line");
-
     $entity = array("Newsfeed" => "main.php",
                     "Timeline" => "timeline.php",
                     "Notifications" => "allNotification.php",
@@ -2637,6 +2644,26 @@ function sideBar(){
                     "Friends" => "requests.php",
                     "Activites" => "allActivities.php"    
                 );
+    }elseif($flag==2 && $id){
+        $iconArray = array("newspaper","user","user-friends","chart-line","info","info-circle");   
+        $entity = array("Newsfeed" => "main.php",
+                    "Timeline" => "timeline.php",
+                    "Friends" => "requests.php",
+                    "Activites" => "allActivities.php" ,
+                    "About" => "about.php?id=$curUser",
+                    "AboutUser"   => "about.php?id=$id"
+                );
+    }else{
+        $iconArray = array("newspaper","user","user-friends","chart-line","info");   
+        $entity = array("Newsfeed" => "main.php",
+                    "Timeline" => "timeline.php",
+                    "Friends" => "requests.php",
+                    "Activites" => "allActivities.php" ,
+                    "About" => "about.php?id=$curUser"
+                );
+    }
+
+    
 
     $counter = 0;
     $sidebar = "";

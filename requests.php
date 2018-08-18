@@ -19,8 +19,8 @@ if (isset($_POST['add_friend'])) {
 require_once dirname(__FILE__) . '/includes/header.php';
 
 ?>
-<div class='friends-page'>
-<div class='friends-content'>
+<div class='friends-page row no-gutters'>
+<div class='friends-content col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9'>
     <?php
 // Getting all your requests from database which you have received
 $userID = $_SESSION['user_id'];
@@ -69,7 +69,7 @@ displayFriends(null, $id);
 echo "</div></div></div></div>";
 
 ?>
-    <div class='people-you-may-know-area'>
+    <div class='people-you-may-know-area col-lg-3 col-xl-3'>
         <div class='people-you-may-know-heading'> People you may know</div>
         <div class='people-you-may-know-content'>
             <?php showPeopleYouMayKnow()?>

@@ -17,7 +17,7 @@ $_SESSION['no_of_posts_changed'] = 0;
 ?>
 <div class='side-bar-container'>
 <div class='side-bar'>
-    <?php sideBar();?>
+    <?php sideBar(1);?>
 </div>
 </div>
 

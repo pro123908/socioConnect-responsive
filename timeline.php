@@ -48,16 +48,26 @@ if (isset($_GET['visitingUserID']) && isset($_SESSION['user_id'])) {
 <?php
 if (isset($_GET['visitingUserID']) && $_GET['visitingUserID'] != $_SESSION['user_id']) {?>
 
-<div class='user-attributes-area'>
-        <div class="user-friend-button">
+<div class='user-attributes-area row no-gutters'>
+        <div class="user-friend-button col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
             <!-- Don't show the friend button if user visiting his own timeline  -->
             <?php $flag == 1 ? showFriendButton(0) : showFriendButton($_GET['visitingUserID']);?>
         </div>
 
-        <div class="user-message-button">
+        <div class="user-message-button col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3">
             <!-- if its not user's own timeline, show message button -->
             <?php if (isset($_GET['visitingUserID']) && $_GET['visitingUserID'] != $_SESSION['user_id']) {?>
                 <a class='timeline-message-button' href="messages.php?id=<?php echo $_GET['visitingUserID']; ?>">Message</a>
+            <?php }?>
+        </div>
+
+        <div class="user-message-button col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+            <!-- if its not user's own timeline, show message button -->
+            <?php if (isset($_GET['visitingUserID']) && $_GET['visitingUserID'] != $_SESSION['user_id']) { 
+                $vId = $_GET['visitingUserID'];
+                ?>
+                
+                <a class='timeline-message-button' href="about.php?id=<?php echo $vId ?>">About</a>
             <?php }?>
         </div>
     </div>
@@ -67,7 +77,7 @@ if (isset($_GET['visitingUserID']) && $_GET['visitingUserID'] != $_SESSION['user
 
 
 
-    <div class='content-area row'>
+    <div class='content-area row no-gutters'>
         <?php
 if ($flag == 1 || $flag == 2) {?>
                 <div class="content-left-side col-lg-3 col-xl-3">
@@ -170,12 +180,19 @@ if ($flag == 1 || $flag == 2) {?>
                 <!-- Right Side content Finished -->
         <?php
 }else{?>
-        <div class='user-isnt-friend'>
+        
+
+
+        
+        <div class='user-isnt-friend col-10 offset-1 col-sm-10 offset-sm-1 col-md-10 offset-md-1'>
             <div class='mutual-friends-heading'>Mutual Friends</div>
             <div class='mutual-friends-content'>
                 <?php showMutualFriends(clearString($_GET['visitingUserID']))?>
             </div>
-        </div>         
+        </div>  
+        
+    
+         
     <?php       
 }
 ?>
