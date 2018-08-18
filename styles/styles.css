@@ -42,6 +42,10 @@ body {
   font-family: "Open Sans", "sans-serif";
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .main-container {
   /* background-image: linear-gradient(to right bottom, #243337, #638a8c);
   background-size: auto;
@@ -93,6 +97,7 @@ body {
 .header-heading {
   font-family: "Berkshire Swash", sans-serif;
   display: flex;
+  justify-content: center;
   align-items: center;
   padding-left: 2%;
 }
@@ -287,7 +292,7 @@ body {
   background-image: url("../assets/logo2.png");
   background-repeat: no-repeat;
   background-size: 40vh;
-  height: 20%
+  height: 25%;
 }
 
 .login-info {
@@ -305,9 +310,9 @@ body {
 
 .sign-form-container {
   /* flex: 1; */
-  margin-top: 20px;
+  margin-top: 15px;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 20px 30px 10px;
+  padding: 15px 25px 10px;
 }
 
 /* Login Page Heading */
@@ -340,7 +345,7 @@ body {
   background: transparent;
   border: none;
   border-bottom: 1px solid #a0aeaf;
-  margin-bottom: 20px;
+  margin-bottom: 17px;
   width: 100%;
   color: #ced7d7;
 }
@@ -1270,7 +1275,7 @@ input[type="file"]:hover {
 
 .user-activities-summary-area,
 .user-activities-summary-area-for-admin {
-  flex: 1;
+  /* flex: 1; */
   margin-bottom: 50px;
   background-color: #fff;
   height: fit-content;
@@ -1774,6 +1779,11 @@ input[type="file"]:hover {
   width: 30%;
 }
 
+.forgot-password-answer {
+  display: block;
+  margin: 0;
+}
+
 /* Modal Content (image) */
 
 .user-info-edit-div-content {
@@ -1850,9 +1860,9 @@ input[type="file"]:hover {
   background: transparent;
   border: none;
   border-bottom: 1px solid #a0aeaf;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: #ced7d7;
-  width: 70%;
+  width: 100%;
 }
 
 .forgot-password-input:focus,
@@ -2013,8 +2023,8 @@ input[type="file"]:hover {
   top: 14%;
   left: 0;
   background: #fff;
-  width: 5%;
-  margin-top: 10px;
+  width: 4%;
+  margin-top: 29px;
   z-index: 2;
 }
 
@@ -2027,7 +2037,7 @@ input[type="file"]:hover {
 .navigation {
   text-align: center;
   padding: 10px;
-  font-size: 30px;
+  font-size: 25px;
   margin-bottom: 20px;
 }
 
@@ -2082,6 +2092,10 @@ input[type="file"]:hover {
   height: fit-content;
   background-color: #fff;
   width: 300px;
+}
+
+.login-container .login-row {
+  margin: 0;
 }
 
 /* Media Queries */
@@ -2271,11 +2285,39 @@ input[type="file"]:hover {
   .user-message-button {
     margin-top: 20px;
   }
+  .login-form-container {
+    padding: 15px 25px 10px;
+  }
+  .forgot-password-div {
+    width: 90%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
   .user-cover-area .user-cover {
     background-size: contain;
+  }
+  .login-input {
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .login-logo {
+    background-position-x: 30%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .login-form-container,
+  .sign-form-container {
+    margin-left: 20%;
+  }
+  .login-container {
+    height: 100%;
+  }
+  .login-form-container {
+    padding: 10px 40px;
   }
 }
 
@@ -2286,5 +2328,9 @@ input[type="file"]:hover {
   }
   .side-bar-res-container {
     display: none;
+  }
+  .friends-area,
+  .recent-activities-area {
+    padding: 0;
   }
 }

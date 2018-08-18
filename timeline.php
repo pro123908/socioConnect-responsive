@@ -77,7 +77,7 @@ if (isset($_GET['visitingUserID']) && $_GET['visitingUserID'] != $_SESSION['user
 
 
 
-    <div class='content-area row no-gutters'>
+    <div class='content-area row'>
         <?php
 if ($flag == 1 || $flag == 2) {?>
                 <div class="content-left-side col-lg-3 col-xl-3">

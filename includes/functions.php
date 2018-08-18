@@ -2626,7 +2626,7 @@ function sendReqFromDefaultAccount($id){
     notification($defaultAccountId, $id, 0, 'request');
 }
 
-function sideBar($flag=0,$id=null){
+function sideBar($flag=0){
 
     /*
     flag 1: desktop
@@ -2643,15 +2643,6 @@ function sideBar($flag=0,$id=null){
                     "Messages" => "messages.php",
                     "Friends" => "requests.php",
                     "Activites" => "allActivities.php"    
-                );
-    }elseif($flag==2 && $id){
-        $iconArray = array("newspaper","user","user-friends","chart-line","info","info-circle");   
-        $entity = array("Newsfeed" => "main.php",
-                    "Timeline" => "timeline.php",
-                    "Friends" => "requests.php",
-                    "Activites" => "allActivities.php" ,
-                    "About" => "about.php?id=$curUser",
-                    "AboutUser"   => "about.php?id=$id"
                 );
     }else{
         $iconArray = array("newspaper","user","user-friends","chart-line","info");   

@@ -25,6 +25,36 @@ if(isset($_GET['id'])){
                         </div>
                     </div>
 
+ <?php if ($_SESSION['user_id'] == 1) {?>
+                         <div class='remove-user-area col-12 col-sm-12 col-md-12'>
+                            <div class='remove-user-heading'>Remove User</div>
+                            <div class='remove-user-content'>
+                                <input type="number" class= "remove-user-input" autocomplete = "off" placeholder="Enter User Id to remove account"><br><br>
+                                <input type="button" class ="remove-user-submit" value= "Remove Account" onclick="deleteUser();">
+                            </div>
+                        </div>
+
+                        <div class='latest-users-area  col-12 col-sm-12 col-md-12'>
+                            <div class='latest-users-heading'>Latest Registered Users</div>
+                            <div class='latest-users-content'>
+                                <?php showLatestRegisteredUsers()?>
+                            </div>
+                        </div>    
+
+                          <div class='user-activities-summary-area-for-admin col-12 col-sm-12 col-md-12'>
+                            <div class='user-activities-summary-heading-for-admin'>Detailed Activites Summary Of Users</div>
+                            <div class='user-activities-summary-input-area-for-admin'>
+                                <input type="number" class= "search-user-details-input" autocomplete = "off" placeholder="Enter User Id..."><br><br>
+                                <input type="button" class ="search-user-details-submit" value= "Get Details" onclick="getUserDetails();">
+                            </div>
+                            <div class='user-activities-summary-content-for-admin'>
+
+                            </div>
+                        </div>     
+                    <?php }?>
+
+                      
+
  <div class='recenet-uploads-area col-12 col-sm-12 col-md-12'>
                         <div class='recenet-uploads-heading'>Recent Uploads</div>
                         <div class='recenet-uploads-content'>

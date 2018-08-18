@@ -101,29 +101,29 @@ elseif (isset($_SESSION['user_id'])) {
 ?>
 
 <div class="login-container">
-    <div class='row'>
+    <div class='login-row row'>
      <div class= 'col-12 col-sm-12  col-md-12 col-lg-6 col-xl-6  login-logo'></div>
      <div class='col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6  login-info'>
       <!-- <h1 class="login-heading">Welcome</h1> -->
       <div class='row'>
-      <div class='login-form-container col-10 offset-1 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-8 offset-lg-2 col-xl-8 offset-xl-3'>
+      <div class='login-form-container col-10 offset-1 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-8 offset-lg-2 col-xl-9'>
         <div class='row'>
 
         
       <form action="index.php" method='POST' class="login-form">
-        <input type="text"  name='email' placeholder="Email" class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 login-input" value= '<?php $value = isset($flag) ? $_SESSION['user_email'] : "";
+        <input type="text"  name='email' placeholder="Email" class="col-xs-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 login-input" value= '<?php $value = isset($flag) ? $_SESSION['user_email'] : "";
 echo $value;?>' required>
         <input type="password" name='password' placeholder="Password" class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 login-input"  required>
         <input  type="hidden" name="email-for-forgot-pass" value= "<?php if (isset($_SESSION['user_email'])) {
     echo $_SESSION['user_email'];
 }
 ?>">
-        <input type="submit" name='loginSubmit' class="col-xs-12 col-sm-12 col-md-12  col-lg-3 col-xl-3 login-submit" value='Login'>
+        <input type="submit" name='loginSubmit' class="col-xs-12 col-sm-12 col-md-12  col-lg-2 col-xl-2 login-submit" value='Login'>
       </form>
 
     <?php
 if (isset($_SESSION['login_message'])) {
-    $display = "<div class='login-error-container'>";
+    $display = "<div class='login-error-container col-lg-12 col-xl-12'>";
     $forgotPassword = '';
     if ($_SESSION['login_message'] != '') {
         $message = $_SESSION['login_message'];
@@ -136,7 +136,7 @@ if (isset($_SESSION['login_message'])) {
         $message = '';
     }
 
-    $display .= "<span class='login-error-msg'>{$message}</span>";
+    $display .= "<span class='login-error-msg'></span>";
     $display .= $forgotPassword . "</div>";
     echo $display;
 }
@@ -146,9 +146,9 @@ if (isset($_SESSION['login_message'])) {
 </div>
 
 
-<div class='sign-form-container col-10 offset-1 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-8 offset-lg-2 col-xl-8 offset-xl-3'>
+<div class='sign-form-container col-10 offset-1 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-8 offset-lg-2 col-xl-9'>
     <div class='row'>
-    <form action="index.php" method='POST' class="sign-form">
+    <form action="index.php" method='POST' class="sign-form col-lg-12 col-xl-12">
       <input type="text" class='col-xs-12 col-sm-12 col-md-12   sign-input' name='fname' placeholder='First Name' maxlength="20" minlength='3' required value=<?php if (isset($_SESSION['s_first_name'])) {
     echo $_SESSION['s_first_name'];
 }?> >
