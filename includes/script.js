@@ -1843,6 +1843,8 @@ function submitEditInfoForm() {
   `;
 
 
+  var date = new Date();
+
 
   //Password Validation
   flag = true;
@@ -1858,7 +1860,7 @@ function submitEditInfoForm() {
     ajaxCalls("POST", "./includes/EventHandlers/editInfo.php", param).then(
       function (result) {
 
-        if (result > 13) {
+        if (result == 1) {
           document.querySelector('.edit-error-msg').innerHTML = '';
 
           infos = {
@@ -1867,7 +1869,7 @@ function submitEditInfoForm() {
             university: university,
             work: work,
             contact: contact,
-            age: result,
+            age: date.getFullYear() - age.substring(0, 4) + " Years",
             question: question,
             gender: gender
           };
@@ -1877,8 +1879,10 @@ function submitEditInfoForm() {
           }
           hideEditInfoDiv();
           document.querySelector(".user-edit-old-password").value = "";
-        } else {
+        } else if (result == 2) {
           document.querySelector('.edit-error-msg').innerHTML = 'Not Old Enough!';
+        } else if (result == 3) {
+          document.querySelector(".wrong-password-edit").innerHTML = 'Wrong Password';
         }
       }
     );
@@ -1974,5 +1978,5 @@ setInterval(commentsRefresh, 3000);
 setInterval(notificationRefresh, 3000);
 setInterval(likesRefresh, 3000);
 setInterval(messageRefresh, 1000);
-// setInterval(updateDropdownMsg, 1000);
+setInterval(updateDropdownMsg, 1000);
 setInterval(updateDropdownMsgCount, 1000);

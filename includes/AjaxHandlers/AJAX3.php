@@ -300,8 +300,8 @@ if (isset($_GET['notiPage'])) {
     // echo $value . ' ' . $class;
 }elseif(isset($_GET['updateDropdown'])){
     updateDropdowns();
-    $value = CountDropdown(2);
-    countDropdownDisplay($value, 'msg');
+    // $value = CountDropdown(2);
+    // countDropdownDisplay($value, 'msg');
 }
 elseif(isset($_GET['updateDropdownCount'])){
     $value = CountDropdown(2);

@@ -2338,6 +2338,7 @@ INFO;
         <div class='user-info-display'>
                     <h3 class='user-info-display-heading'>Save Changes</h3>
                     <input placeholder='Current Password'  type = "password" name = "password" class = "user-edit-field user-edit-old-password" autocomplete="off">
+                    <div class='wrong-password-edit edit-error-msg'></div>
         </div>
                     <div class='user-edit-save-container'>
                     <input type = "button" value = "Save" name="save" class = "user-edit-save" onclick = "submitEditInfoForm()">
@@ -2347,7 +2348,7 @@ INFO;
         <?php
 if (isset($_SESSION['edit_info_pass_error']) && $_SESSION['edit_info_pass_error']) {
                 ?>
-                <div class='user-info-wrong-pass-warning'>Wrong Password</div>
+                <div class='user-info-wrong-pass-warning'></div>
                 <?php
 unset($_SESSION['edit_info_pass_error']);
             }

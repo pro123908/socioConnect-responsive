@@ -75,7 +75,7 @@ if($index)
         <div class="header-links col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 ">
 
           <!--************************* Notification Dropdown ****************************-->
-          <div class='row col-12'>
+          <div class='row col-12 '>
           <div class='notification-dropdown col-3 col-sm-3 col-md-1 col-lg-1 col-xl-1'>
             <a href="javascript:toggleDropdown('.noti-dropdown');" class="header-btn mr-1 "><i class="noti-click fas fa-bell fa-lg"></i></a>
 

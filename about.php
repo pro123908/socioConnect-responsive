@@ -1,7 +1,7 @@
 <?php
 
 require_once dirname(__FILE__) . '/includes/header.php';
-if (!isset($_SESSION['user_id'])) {
+if (!isset($_SESSION['user_id'])){
     redirection('index.php');
 }
 
@@ -74,5 +74,7 @@ if(isset($_GET['id'])){
 
 </div>
 
-<?php } ?>
+<?php } else{
+    redirection('main.php');
+} ?>
 <script src="./includes/script.js" ></script>
